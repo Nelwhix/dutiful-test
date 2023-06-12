@@ -1,4 +1,4 @@
-import { Outlet, Link } from '@tanstack/router'
+import { Link, Outlet } from '@tanstack/router'
 
 export default function Layout() {
     const date = new Date()

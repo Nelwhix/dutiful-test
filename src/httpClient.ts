@@ -1,5 +1,5 @@
 export default class HTTPClient {
-    host = import.meta.env.API_URL
+    static host = import.meta.env.VITE_API_URL
 
     static async post(url = "", data = {}) {
         const res = await fetch(`${this.host + url}`, {
@@ -12,7 +12,7 @@ export default class HTTPClient {
         });
         if (!res.ok) {
             const data = await res.json()
-            throw new Error(`{"message": "${data.message}","code": ${res.status}}`)
+            throw new Error(`{"message": "${data.error}","code": ${res.status}}`)
         }
 
         return res.json()

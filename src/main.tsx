@@ -6,9 +6,13 @@ import {
     RouterProvider
 } from '@tanstack/router'
 import router from "./router"
+import { Provider } from 'react-redux'
+import { store } from './stores'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+        <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )
