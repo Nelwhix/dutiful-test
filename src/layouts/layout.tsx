@@ -1,4 +1,4 @@
-import { Link, Outlet } from '@tanstack/router'
+import { Link, Outlet } from 'react-router-dom'
 
 export default function Layout() {
     const date = new Date()

@@ -9,7 +9,7 @@ import {
 } from '../stores/index'
 import HTTPClient from "../httpClient";
 import Alert from "../components/Alert";
-import { Link } from "@tanstack/router";
+import { Link } from "react-router-dom";
 
 export default function Register() {
     const isAnimating = useAppSelector(state => state.loader.isAnimating)
